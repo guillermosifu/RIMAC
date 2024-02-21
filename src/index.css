@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 40px;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 28px;
+  letter-spacing: -.2px;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: .4px;
+}
+
+h4 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: .2px;
+}
+
+h5 {
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 16px;
+  letter-spacing: .6px;
+}
+
+h6 {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: .2px;
+}
+
+p {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 20px;
+  letter-spacing: .1px;
+}
+
+a {
+  font-weight: 600;
+  font-size: 12.5px;
+  cursor: pointer;
+  line-height: 20px;
+  letter-spacing: .1px;
+  text-decoration: underline;
+}
+
+li {
+  list-style: disc;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: .1px;
+  margin-bottom: 1rem;
+}
+
+.gradientLeft {
+  width: 450px;
+  height: 450px;
+  background-color: #C333FF;
+  filter: blur(150px);
+  border-radius: 100%;
+  position: fixed;
+  z-index: -1;
+  transform: rotate(-2.51grad);
+}
+
+.gradientRight {
+  width: 450px;
+  height: 450px;
+  background-color: #00F4E2;
+  filter: blur(130px);
+  border-radius: 100%;
+  position: fixed;
+  z-index: -1;
+}
+
+.MuiFormControlLabel-root  {
+  margin-right: 0 !important;
+}
+
+.css-5xe99f-MuiLinearProgress-bar1 {
+  background-color: #4F4FFF !important;
+}
+
+.MuiRadio-root {
+  padding: 10px !important;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
