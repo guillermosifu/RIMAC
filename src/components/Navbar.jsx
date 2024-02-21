@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom'
+// layouts
+import { MainLayout } from '@/layouts/MainLayout'
+// assets
 import { PhoneIcon } from '@/assets/icons/PhoneIcon'
 import logo from '@/assets/imgs/logo.png'
-import { MainLayout } from '@/layouts/MainLayout'
 
 export const Navbar = () => (
   <section className='w-full py-4 px-5 md:px-0'>

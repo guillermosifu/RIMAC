@@ -1,5 +1,7 @@
 import PropTypes from "prop-types";
+// components
 import { TextField } from "@mui/material";
+// themes
 import { inputTheme } from "@/themes/inputTheme";
 
 export function Input({ sx, register, isShowError, errors, ...props }) {

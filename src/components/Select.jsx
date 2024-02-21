@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
-import { MenuItem, Select as SelectField } from "@mui/material";
 import { useController } from 'react-hook-form';
+// components
+import { MenuItem, Select as SelectField } from "@mui/material";
 
 export const Select = ({ sx, options, name, control, ...props }) => {
   const { field } = useController({ name: name, control });

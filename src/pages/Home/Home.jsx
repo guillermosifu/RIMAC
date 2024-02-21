@@ -1,21 +1,15 @@
-import { useEffect } from "react";
-import { FormRegistration } from "./components/FormRegistration";
+// layouts
 import { MainLayout } from "@/layouts/MainLayout";
+// components
 import { HomeLayout } from "@/layouts/HomeLayout";
-import family from "@/assets/imgs/family.png";
-import { useUserStore } from "@/stores/user.store";
-import { useNavigate } from "react-router-dom";
+import { RightForm } from "./components/RightForm";
+import { LeftImage } from "./components/LeftImage";
+// hooks
+import { useIsLogged } from "@/hooks/useIsLogged";
 
-export const Home = () => {
-  const { isLogged } = useUserStore(state => state.user) 
-  const navigate = useNavigate()
-
-  useEffect(() => {
-    if (isLogged) {
-      navigate("/plans")
-    }
-  }, [])
-
+export default function Home () {
+  useIsLogged()
+  
   return (
     <HomeLayout>
       <div className="grow w-full flex flex-col justify-center items-center">
@@ -23,10 +17,8 @@ export const Home = () => {
         <div className="gradientRight -top-[18rem] -right-[28rem] md:-top-[6rem] md:-right-[25rem]" />
         <MainLayout className="w-full h-full">
           <section className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-20 p-8 items-center w-full h-full">
-            <picture className="hidden md:flex justify-end items-center">
-              <img src={family} alt="family" />
-            </picture>
-            <FormRegistration />
+            <LeftImage />
+            <RightForm />
           </section>
         </MainLayout>
       </div>

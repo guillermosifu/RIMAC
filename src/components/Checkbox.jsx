@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+// components
 import { Checkbox as CheckboxBasic } from "@mui/material"
 
 export const Checkbox = ({ label, register, errors, ...props }) => {

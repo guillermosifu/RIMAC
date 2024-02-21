@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types'
+// components
 import { FormControl, FormControlLabel, Radio as RadioBasic } from "@mui/material";
+// assets
 import { RadioSuccess } from "@/assets/icons/RadioSuccess";
 
 export const Radio = ({ className, ...props }) => (

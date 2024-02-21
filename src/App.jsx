@@ -1,12 +1,17 @@
-import { Route, Routes } from 'react-router-dom'
-import { Home } from './pages/Home/Home'
-import { PaymentDetail } from './pages/PaymentDetail/PaymentDetail'
-import { PlansSection } from './pages/PlansSection/PlansSection'
+import { Suspense, lazy } from 'react';
+import { Navigate, Route, Routes } from 'react-router-dom'
+// pages
+const Home = lazy(() => import('@/pages/Home/Home'));
+const PaymentDetail = lazy(() => import('@/pages/PaymentDetail/PaymentDetail'));
+const PlansSection = lazy(() => import('@/pages/PlansSection/PlansSection'));
 
-export const App = () =>  (
-  <Routes>
-    <Route path='/' element={<Home />} />
-    <Route path='/plans' element={<PlansSection />}/>
-    <Route path='/payment' element={<PaymentDetail />}/>
-  </Routes>
+export const App = () => (
+  <Suspense>
+    <Routes>
+      <Route path='*' element={<Navigate to="/" />} />
+      <Route path='/' element={<Home />} />
+      <Route path='/plans' element={<PlansSection />}/>
+      <Route path='/payment' element={<PaymentDetail />}/>
+    </Routes>
+  </Suspense>
 )
