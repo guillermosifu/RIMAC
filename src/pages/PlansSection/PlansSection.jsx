@@ -35,16 +35,16 @@ export default function PlansSection() {
               onClick={resetUser} 
             />
 
-            <section 
-              className="md:w-max max-w-[1300px] p-6 md:p-0 mx-auto 
-                         flex flex-col justify-center items-center 
-                         md:mt-20 gap-8"
+            <section
+              className="max-w-[1300px]  p-6 md:p-0 mx-auto 
+              flex flex-col justify-center items-center md:mt-20 gap-8
+              "
             >
               <WelcomeText />
               
               <PlanSelection />
 
-              <PlansDescriptions />
+              <PlansDescriptions  />
             </section>
           </MainLayout>
         </BackgroundLayout>
